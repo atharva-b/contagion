@@ -19,9 +19,14 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 	public MouseListenerContagion() {
 		addMouseListener(this);
 		setSize(900, 600);
+		setTitle("Contagion");
 		setLayout(null);		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
+		addWindowListener(new java.awt.event.WindowAdapter() {
+			public void windowClosing(java.awt.event.WindowEvent e) {
+				new CloseWindow();
+			}
+		});
 	}
 	
 	public void mouseClicked(MouseEvent e) {}
@@ -35,6 +40,8 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 			g.fillRect(newGameRectX, newGameRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("New Game", newGameTextX, newGameTextY);
+			new BeginnerLevel();
+			dispose();
 		}
 		if (e.getX() > quitRectX 
 				&& e.getX() < quitRectX + RectWidth 
@@ -44,6 +51,8 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 			g.fillRect(quitRectX, quitRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Quit", quitTextX, quitTextY);
+			new CloseWindow();
+			dispose();
 		}
 	}	
 	public void mouseReleased(MouseEvent e) {
