@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.event.MouseListener;
 
-public class BeginnerLevel extends JFrame implements MouseListener {
+public class BeginnerLevelEnding extends JFrame implements MouseListener {
 	
 	private int continueRectX = 850; 
  	private int continueRectY = 730;
@@ -12,7 +12,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
   	private int continueTextX = 875;
   	private int continueTextY = 755;
 	
-	public BeginnerLevel() {
+	public BeginnerLevelEnding() {
       JLabel label = new JLabel();  
       label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Example Logo.png"));
       label.setBounds(120, -100, 950, 350);
@@ -41,7 +41,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 			g.fillRect(continueRectX, continueRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Continue", continueTextX, continueTextY);
-			new BeginnerLevelIntermediate();
+			new TestLevel();
 			dispose();
 		}	
 	}
