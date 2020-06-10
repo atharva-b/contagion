@@ -9,7 +9,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
     	private int RectHeight = 40;
    	private int option1RectX = 250;
    	private int option1RectY = 550;
-   	private int option1TextX = 275;
+   	private int option1TextX = 278;
    	private int option1TextY = 575;
    	private int option2RectX = 600;
    	private int option2RectY = 550;
@@ -17,7 +17,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
    	private int option2TextY = 575;      
    	private int option3RectX = 250;
    	private int option3RectY = 650;
-   	private int option3TextX = 275;
+   	private int option3TextX = 278;
    	private int option3TextY = 675;
    	private int option4RectX = 600;
    	private int option4RectY = 650;
@@ -49,45 +49,42 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 				&& e.getX() < option1RectX + RectWidth 
 				&& e.getY() > option1RectY 
 				&& e.getY() < option1RectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Weights", option1TextX, option1TextY);
-			new ErrorCheck();
+			new BeginnerLevelEnding();
 			dispose();
 		}
       if(e.getX() > option2RectX 
 				&& e.getX() < option2RectX + RectWidth 
 				&& e.getY() > option2RectY 
 				&& e.getY() < option2RectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Paper Towels", option2TextX, option2TextY);
 			new ErrorCheck();
-			dispose();
 		}
       if(e.getX() > option3RectX 
 				&& e.getX() < option3RectX + RectWidth 
 				&& e.getY() > option3RectY 
 				&& e.getY() < option3RectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Clothing", option3TextX, option3TextY);
 			new ErrorCheck();
-			dispose();
 		}
       if(e.getX() > option4RectX 
 				&& e.getX() < option4RectX + RectWidth 
 				&& e.getY() > option4RectY 
 				&& e.getY() < option4RectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
-			g.drawString("Equipment", option4TextX, option4TextY);
-			new BeginnerLevelEnding();
-			dispose();
+			g.drawString("Yoga Mat", option4TextX, option4TextY);
+			new ErrorCheck();
 		}	
 	}
 
@@ -109,7 +106,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
  		g.setColor(Color.GRAY);
 		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Equipment", option4TextX, option4TextY);     
+		g.drawString("Yoga Mat", option4TextX, option4TextY);     
 	}
 
 	@Override
@@ -130,7 +127,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
  		g.setColor(Color.GRAY);
 		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Equipment", option4TextX, option4TextY);    	
+		g.drawString("Yoga Mat", option4TextX, option4TextY);    	
 	}
 
 	@Override
@@ -151,6 +148,6 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
  		g.setColor(Color.GRAY);
 		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Equipment", option4TextX, option4TextY);     		
+		g.drawString("Yoga Mat", option4TextX, option4TextY);     		
 	}
 }

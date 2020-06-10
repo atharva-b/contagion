@@ -41,7 +41,7 @@ public class BeginnerLevelIntermediate extends JFrame implements MouseListener {
 				&& e.getX() < continueRectX + RectWidth 
 				&& e.getY() > continueRectY 
 				&& e.getY() < continueRectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(continueRectX, continueRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Continue", continueTextX, continueTextY);
@@ -52,7 +52,7 @@ public class BeginnerLevelIntermediate extends JFrame implements MouseListener {
 				&& e.getX() < goBackRectX + RectWidth 
 				&& e.getY() > goBackRectY 
 				&& e.getY() < goBackRectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(goBackRectX, goBackRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Go Back", goBackTextX, goBackTextY);

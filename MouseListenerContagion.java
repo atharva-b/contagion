@@ -7,23 +7,23 @@ import java.awt.event.MouseListener;
 public class MouseListenerContagion extends JFrame implements MouseListener {
 	private int RectWidth = 100; 
 	private int RectHeight = 40;
-	private int newGameRectX = 400;
-	private int newGameRectY = 280;
-	private int newGameTextX = 420; 
-	private int newGameTextY = 305; 
-	private int quitRectX = 400;
-	private int quitRectY = 350;
-	private int quitTextX = 438;
-	private int quitTextY = 375;
+	private int newGameRectX = 450;
+	private int newGameRectY = 400;
+	private int newGameTextX = 470; 
+	private int newGameTextY = 425; 
+	private int quitRectX = 450;
+	private int quitRectY = 460;
+	private int quitTextX = 488;
+	private int quitTextY = 485;
 	
-	public MouseListenerContagion() {
+	public MouseListenerContagion() {      
       JLabel label = new JLabel();  
       label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Example Logo.png"));
-      label.setBounds(50, -80, 950, 350);
+      label.setBounds(120, -100, 950, 350);
       add(label);
-		addMouseListener(this);
-		setSize(900, 600);
-		setTitle("Contagion");
+      addMouseListener(this);
+		setSize(1000, 800);
+      setTitle("Contagion");
 		setLayout(null);		
 		setVisible(true);
 		addWindowListener(new java.awt.event.WindowAdapter() {

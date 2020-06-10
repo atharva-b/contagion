@@ -7,14 +7,15 @@ public class ErrorCheck extends JFrame implements MouseListener {
 	
       private int RectWidth = 100; 
     	private int RectHeight = 40;
-   	private int exitRectX = 50;
-   	private int exitRectY = 80;
-   	private int exitTextX = 90;
-   	private int exitTextY = 105;
+   	private int exitRectX = 100;
+   	private int exitRectY = 210;
+   	private int exitTextX = 140;
+   	private int exitTextY = 235;
 	
 	public ErrorCheck() {      
       addMouseListener(this);
-		setSize(200, 200);
+      setLocation(350,200);
+      setSize(300, 300);
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
@@ -33,11 +34,10 @@ public class ErrorCheck extends JFrame implements MouseListener {
 				&& e.getX() < exitRectX + RectWidth 
 				&& e.getY() > exitRectY 
 				&& e.getY() < exitRectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(exitRectX, exitRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Exit", exitTextX, exitTextY);
-			new BeginnerLevelQuestion1();
 			dispose();
 		}
 	}

@@ -37,7 +37,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 				&& e.getX() < continueRectX + RectWidth 
 				&& e.getY() > continueRectY 
 				&& e.getY() < continueRectY + RectHeight) {		
-			g.setColor(Color.GRAY);
+			g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(continueRectX, continueRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Continue", continueTextX, continueTextY);
