@@ -23,6 +23,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 	}
+   
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -72,4 +73,15 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 		g.setColor(Color.BLACK);
 		g.drawString("Continue", continueTextX, continueTextY);		
 	}
+   
+   public void paint (Graphics g)
+   {
+      g = getGraphics();
+      g.drawRect(100, 200, 800, 500);
+      g.drawLine(300, 200, 300, 700);
+      g.drawLine(600, 200, 600, 700);
+      g.drawLine(100, 265, 900, 265);
+      g.drawLine(100, 410, 900, 410);
+      g.drawLine(100, 555, 900, 555);
+   }
 }

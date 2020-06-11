@@ -29,6 +29,12 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
    	private int submitRectY = 650;
    	private int submitTextX = 455;
    	private int submitTextY = 675;
+      private boolean clicked1 = false;
+      private boolean clicked2 = false;
+      private boolean clicked3 = false;
+      private boolean clicked4 = false;
+      private int totalClicked = 0;
+
 	
 	public TestLevelQuestion() {
       JLabel label = new JLabel();  
@@ -55,46 +61,70 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 				&& e.getX() < option1RectX + RectWidth 
 				&& e.getY() > option1RectY 
 				&& e.getY() < option1RectY + RectHeight) {		
-			g.setColor(Color.LIGHT_GRAY);
-			g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
-			g.setColor(Color.BLACK);
-			g.drawString("Put on Face Mask", option1TextX, option1TextY);
-			//new ErrorCheck();
-			dispose();
+         if (totalClicked <= 2 && totalClicked >= 0)
+         {
+            if (clicked1 == true)
+               totalClicked--;
+            else
+               totalClicked++;
+            clicked1 ^= true;
+		   	g.setColor(Color.LIGHT_GRAY);
+		   	g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
+		   	g.setColor(Color.BLACK);
+		   	g.drawString("Put on Face Mask", option1TextX, option1TextY);
+         }
 		}
       if(e.getX() > option2RectX 
 				&& e.getX() < option2RectX + RectWidth 
 				&& e.getY() > option2RectY 
-				&& e.getY() < option2RectY + RectHeight) {		
-			g.setColor(Color.LIGHT_GRAY);
-			g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
-			g.setColor(Color.BLACK);
-			g.drawString("Wear Gloves", option2TextX, option2TextY);
-			//new ErrorCheck();
-			dispose();
+				&& e.getY() < option2RectY + RectHeight) {
+         if (totalClicked <= 2 && totalClicked >= 0)
+         {
+            if (clicked2 == true)
+               totalClicked--;
+            else
+               totalClicked++;
+            clicked2 ^= true;		
+			   g.setColor(Color.LIGHT_GRAY);
+			   g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
+			   g.setColor(Color.BLACK);
+			   g.drawString("Wear Gloves", option2TextX, option2TextY);
+         }
 		}
       if(e.getX() > option3RectX 
 				&& e.getX() < option3RectX + RectWidth 
 				&& e.getY() > option3RectY 
-				&& e.getY() < option3RectY + RectHeight) {		
-			g.setColor(Color.LIGHT_GRAY);
-			g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
-			g.setColor(Color.BLACK);
-			g.drawString("Stand 2 Metres", option3TextXa, option3TextYa);
-         g.drawString("Apart", option3TextXb, option3TextYb);
-			//new ErrorCheck();
-			dispose();
+				&& e.getY() < option3RectY + RectHeight) {
+         if (totalClicked <= 2 && totalClicked >= 0)
+         {
+            if (clicked3 == true)
+               totalClicked--;
+            else
+               totalClicked++;
+            clicked3 ^= true;		
+   			g.setColor(Color.LIGHT_GRAY);
+   			g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
+   			g.setColor(Color.BLACK);
+   			g.drawString("Stand 2 Metres", option3TextXa, option3TextYa);
+            g.drawString("Apart", option3TextXb, option3TextYb);
+         }
 		}
       if(e.getX() > option4RectX 
 				&& e.getX() < option4RectX + RectWidth 
 				&& e.getY() > option4RectY 
 				&& e.getY() < option4RectY + RectHeight) {		
-			g.setColor(Color.LIGHT_GRAY);
+			if (totalClicked <= 2 && totalClicked >= 0)
+         {
+            if (clicked4 == true)
+               totalClicked--;
+            else
+               totalClicked++;
+            clicked4 ^= true;
+         g.setColor(Color.LIGHT_GRAY);
 			g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Clean Surfaces", option4TextX, option4TextY);
-			//new BeginnerLevelEnding();
-			dispose();
+         }
 		}
          if(e.getX() > submitRectX 
    			&& e.getX() < submitRectX + RectWidth 
@@ -104,7 +134,10 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 			g.fillRect(submitRectX, submitRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Submit", submitTextX, submitTextY);
-			new TestLevelFinalScreen();
+			//if ()
+         new TestLevelSucceeded();
+         //else
+         // new TestLevelFailed();
 			dispose();
  		}	
 	}
@@ -112,21 +145,33 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		Graphics g = getGraphics();
-      g.setColor(Color.GRAY);
+      if (clicked1)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY); 
 		g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Put on Face Mask", option1TextX, option1TextY);
-		g.setColor(Color.GRAY);
+		if (clicked2)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
       g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
    	g.setColor(Color.BLACK);
 		g.drawString("Wear Gloves", option2TextX, option2TextY);
-      g.setColor(Color.GRAY);
-		g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
+      if (clicked3)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Stand 2 Metres", option3TextXa, option3TextYa);
       g.drawString("Apart", option3TextXb, option3TextYb);
- 		g.setColor(Color.GRAY);
-		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
+      if (clicked4)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Clean Surfaces", option4TextX, option4TextY);
       g.setColor(Color.GRAY);
@@ -137,22 +182,34 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-      Graphics g = getGraphics();
-      g.setColor(Color.GRAY);
+		Graphics g = getGraphics();
+      if (clicked1)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY); 
 		g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Put on Face Mask", option1TextX, option1TextY);
-		g.setColor(Color.GRAY);
+		if (clicked2)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
       g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
    	g.setColor(Color.BLACK);
 		g.drawString("Wear Gloves", option2TextX, option2TextY);
-      g.setColor(Color.GRAY);
-		g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
+      if (clicked3)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Stand 2 Metres", option3TextXa, option3TextYa);
       g.drawString("Apart", option3TextXb, option3TextYb);
-      g.setColor(Color.GRAY);
-		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
+      if (clicked4)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Clean Surfaces", option4TextX, option4TextY);
       g.setColor(Color.GRAY);
@@ -164,26 +221,38 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		Graphics g = getGraphics();
-      g.setColor(Color.GRAY);
+      if (clicked1)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY); 
 		g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Put on Face Mask", option1TextX, option1TextY);
-		g.setColor(Color.GRAY);
+		if (clicked2)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
       g.fillRect(option2RectX, option2RectY, RectWidth, RectHeight);
    	g.setColor(Color.BLACK);
 		g.drawString("Wear Gloves", option2TextX, option2TextY);
-      g.setColor(Color.GRAY);
-		g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
+      if (clicked3)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option3RectX, option3RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Stand 2 Metres", option3TextXa, option3TextYa);
       g.drawString("Apart", option3TextXb, option3TextYb);
-      g.setColor(Color.GRAY);
-		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
+      if (clicked4)
+         g.setColor(Color.LIGHT_GRAY);
+      else
+         g.setColor(Color.GRAY);
+      g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
 		g.drawString("Clean Surfaces", option4TextX, option4TextY);
       g.setColor(Color.GRAY);
 		g.fillRect(submitRectX, submitRectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Submit", submitTextX, submitTextY);    		
+		g.drawString("Submit", submitTextX, submitTextY);   		
 	}
 }
