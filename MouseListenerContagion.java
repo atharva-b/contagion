@@ -5,28 +5,41 @@ import java.awt.event.MouseListener;
 
 
 public class MouseListenerContagion extends JFrame implements MouseListener {
-	private int newGameRectX = 400;
-	private int newGameRectY = 280;
-	private int RectWidth = 100; 
+	private int RectWidth = 150; 
 	private int RectHeight = 40;
-	private int newGameTextX = 410; 
-	private int newGameTextY = 305; 
-	private int quitRectX = 400;
-	private int quitRectY = 350;
-	private int quitTextX = 410;
-	private int quitTextY = 375;
+	private int newGameRectX = 325;
+	private int newGameRectY = 300;
+	private int newGameTextX = 370; 
+	private int newGameTextY = 325; 
+	private int quitRectX = 325;
+	private int quitRectY = 360;
+	private int quitTextX = 388;
+	private int quitTextY = 385;
+	private int windowName = 1;
 	
-	public MouseListenerContagion() {
-		addMouseListener(this);
-		setSize(900, 600);
-		setLayout(null);		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
+	public MouseListenerContagion() {      
+      JLabel label = new JLabel();  
+      label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
+      label.setBounds(0, -100, 950, 350);
+      add(label);
+      addMouseListener(this);
+      setSize(800, 600);
+      setTitle("Contagion");
+      setLayout(null);		
+      setVisible(true);
+      addWindowListener(new java.awt.event.WindowAdapter() {
+    	  public void windowClosing(java.awt.event.WindowEvent e) {
+    		  new CloseWindow(windowName);
+    		  }
+    	  });
+ 	}
+	
+	public void mouseClicked(MouseEvent e) {
+		drawGraphics();
 	}
-	
-	public void mouseClicked(MouseEvent e) {}
 	public void mousePressed(MouseEvent e) {
 		Graphics g = getGraphics();
+		drawGraphics();
 		if(e.getX() > newGameRectX 
 				&& e.getX() < newGameRectX + RectWidth 
 				&& e.getY() > newGameRectY 
@@ -35,6 +48,8 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 			g.fillRect(newGameRectX, newGameRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("New Game", newGameTextX, newGameTextY);
+			dispose();
+			new BeginnerLevelInstructions();
 		}
 		if (e.getX() > quitRectX 
 				&& e.getX() < quitRectX + RectWidth 
@@ -44,20 +59,21 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 			g.fillRect(quitRectX, quitRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Quit", quitTextX, quitTextY);
+			dispose();
+			new CloseWindow(windowName);
 		}
 	}	
 	public void mouseReleased(MouseEvent e) {
-		Graphics g = getGraphics();
-		g.setColor(Color.BLUE);
-		g.fillRect(newGameRectX, newGameRectY, RectWidth, RectHeight);
-		g.setColor(Color.WHITE);
-		g.drawString("New Game", newGameTextX, newGameTextY);
-		g.setColor(Color.RED);
-		g.fillRect(quitRectX, quitRectY, RectWidth, RectHeight);
-		g.setColor(Color.WHITE);
-		g.drawString("Quit", quitTextX, quitTextY);
+		drawGraphics();
 	}
 	public void mouseEntered(MouseEvent e) {
+		drawGraphics();
+	}
+	public void mouseExited(MouseEvent e) {
+		drawGraphics();
+	}	
+	
+	public void drawGraphics() {
 		Graphics g = getGraphics();
 		g.setColor(Color.BLUE);
 		g.fillRect(newGameRectX, newGameRectY, RectWidth, RectHeight);
@@ -68,15 +84,5 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 		g.setColor(Color.WHITE);
 		g.drawString("Quit", quitTextX, quitTextY);
 	}
-	public void mouseExited(MouseEvent e) {
-		Graphics g = getGraphics();
-		g.setColor(Color.BLUE);
-		g.fillRect(newGameRectX, newGameRectY, RectWidth, RectHeight);
-		g.setColor(Color.WHITE);
-		g.drawString("New Game", newGameTextX, newGameTextY);
-		g.setColor(Color.RED);
-		g.fillRect(quitRectX, quitRectY, RectWidth, RectHeight);
-		g.setColor(Color.WHITE);
-		g.drawString("Quit", quitTextX, quitTextY);
-	}	
+	
 }
