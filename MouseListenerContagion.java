@@ -1,37 +1,44 @@
 import java.awt.*;
 import java.awt.event.*;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
 
 public class MouseListenerContagion extends JFrame implements MouseListener {
-	private int RectWidth = 150; 
+	private int RectWidth = 100; 
 	private int RectHeight = 40;
-	private int newGameRectX = 325;
-	private int newGameRectY = 300;
-	private int newGameTextX = 370; 
-	private int newGameTextY = 325; 
-	private int quitRectX = 325;
-	private int quitRectY = 360;
-	private int quitTextX = 388;
-	private int quitTextY = 385;
-	private int windowName = 1;
+	private int newGameRectX = 450;
+	private int newGameRectY = 400;
+	private int newGameTextX = 470; 
+	private int newGameTextY = 425; 
+	private int quitRectX = 450;
+	private int quitRectY = 460;
+	private int quitTextX = 488;
+	private int quitTextY = 485;
+   private int windowName = 1;
 	
 	public MouseListenerContagion() {      
       JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
-      label.setBounds(0, -100, 950, 350);
+      //label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
+      label.setBounds(120, -100, 950, 350);
       add(label);
-      addMouseListener(this);
-      setSize(800, 600);
-      setTitle("Contagion");
-      setLayout(null);		
-      setVisible(true);
-      addWindowListener(new java.awt.event.WindowAdapter() {
-    	  public void windowClosing(java.awt.event.WindowEvent e) {
-    		  new CloseWindow(windowName);
-    		  }
-    	  });
+		addMouseListener(this);
+		setSize(1000, 800);
+		setTitle("Contagion");
+		setLayout(null);		
+		setVisible(true);
+		addWindowListener(new java.awt.event.WindowAdapter() {
+			public void windowClosing(java.awt.event.WindowEvent e) {
+				new CloseWindow(windowName);
+			}
+		});
  	}
 	
 	public void mouseClicked(MouseEvent e) {
@@ -84,5 +91,4 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 		g.setColor(Color.WHITE);
 		g.drawString("Quit", quitTextX, quitTextY);
 	}
-	
 }

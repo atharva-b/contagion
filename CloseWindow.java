@@ -30,6 +30,27 @@ public class CloseWindow{
 			case 3:
 				new BeginnerLevel();
 				break;
+         case 4:
+            new BeginnerLevelQuestion1();
+            break;
+         case 5:
+            new BeginnerLevelQuestion2();
+            break;
+         case 6:
+            new BeginnerLevelEnding();
+            break;
+         case 7:
+            new TestLevel();
+            break;
+         case 8:
+            new TestLevelQuestion();
+            break;
+         case 9:
+            new TestLevelSucceeded();
+            break;
+         case 10:
+            new TestLevelFailed();
+            break;
 			default:
 				new MouseListenerContagion();
 			}

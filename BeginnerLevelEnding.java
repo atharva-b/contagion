@@ -11,10 +11,11 @@ public class BeginnerLevelEnding extends JFrame implements MouseListener {
 	private int RectHeight = 40;
   	private int continueTextX = 875;
   	private int continueTextY = 755;
-	
+	private int windowName = 6;
+   
 	public BeginnerLevelEnding() {
       JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
       label.setBounds(120, -100, 950, 350);
       add(label);
       addMouseListener(this);
@@ -22,6 +23,11 @@ public class BeginnerLevelEnding extends JFrame implements MouseListener {
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
+		addWindowListener(new java.awt.event.WindowAdapter() {
+			public void windowClosing(java.awt.event.WindowEvent e) {
+				new CloseWindow(windowName);
+			}
+		});
 	}
 
 	@Override
