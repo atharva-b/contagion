@@ -14,7 +14,7 @@ public class BeginnerLevelEnding extends JFrame implements MouseListener {
 	
 	public BeginnerLevelEnding() {
       JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
       label.setBounds(120, -100, 950, 350);
       add(label);
       addMouseListener(this);

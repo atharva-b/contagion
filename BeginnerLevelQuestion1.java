@@ -27,10 +27,19 @@ public class BeginnerLevelQuestion1 extends JFrame implements MouseListener {
    	private int option4RectY = 650;
    	private int option4TextX = 608;
    	private int option4TextY = 675;
+     //  private int pictureRectX = ;
+//    	private int pictureRectY = ;
+//    	private int pictureTextX = ;
+//    	private int pictureTextY = ;
+//       private int questionRectX = ;
+//    	private int questionRectY = ;
+//    	private int questionTextX = ;
+//    	private int questionTextY = ;
+
 	
 	public BeginnerLevelQuestion1() {
       JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
       label.setBounds(120, -80, 950, 350);
       add(label);
       addMouseListener(this);

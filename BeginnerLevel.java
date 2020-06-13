@@ -19,7 +19,8 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 	
 	public BeginnerLevel() {
       JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
+      //label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
       label.setBounds(120, -100, 950, 350);
       add(label);
       addMouseListener(this);
@@ -48,7 +49,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 			g.fillRect(continueRectX, continueRectY, rectWidth, rectHeight);
 			g.setColor(Color.BLACK);
 			g.drawString("Continue", continueTextX, continueTextY);
-			//new BeginnerLevelIntermediate();
+			new BeginnerLevelIntermediate();
 			dispose();
 		}
 		if(e.getX() > mainMenuRectX 
