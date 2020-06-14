@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.event.MouseListener;
 
-public class TestLevelQuestion extends JFrame implements MouseListener {
+public class TestLevelQuestion3 extends JFrame implements MouseListener {
 
 	private int RectWidth = 100; 
 	private int RectHeight = 40;
@@ -43,7 +43,7 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
    private int randomNum = 0;
 
 
-	public TestLevelQuestion() {
+	public TestLevelQuestion3() {
 		JLabel label = new JLabel();  
 		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
 		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
@@ -56,9 +56,9 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       Font font1 = new Font("Monospaced", Font.PLAIN, 18);
       if (randomNum == 1)
       {
-      	JTextArea opt1 = new JTextArea("You meet David as he enters through the door.\n"
-          + "David is heavily coughing and has a read face.\n"
-          + "As he walks closer towards you, it seems like he \nis shaking heavily.\n"
+      	JTextArea opt1 = new JTextArea("You see Tayla coming from the pool area.\n"
+          + "She is shivering, and is coughing a lot.\n" 
+          + "As you get closer, you see that her face is red.\n"
           + "What precautions do you take?");
    		opt1.setEditable(false);
    		opt1.setBounds(190, 225, 550, 125);
@@ -67,8 +67,9 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       }
       else if (randomNum == 2)
       {
-      	JTextArea opt2 = new JTextArea("You meet Doug near the water fountain.\n" 
-          + "Doug seems to be tired, has a red face, and is \nsweating a lot.\n"
+      	JTextArea opt2 = new JTextArea("You see Corinna coming from the sauna.\n" 
+          + "She is sweating profusely, which is regular, but \nis also shivering.\n"
+          + "You see that her face is turning red.\n"
           + "What precautions do you take?");
    		opt2.setEditable(false);
    		opt2.setBounds(190, 225, 550, 125);
@@ -77,8 +78,8 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       }
       else if (randomNum == 3)
       {
-      	JTextArea opt3 = new JTextArea("You see Elizabeth at the treadmill.\n"
-          + "As you get closer, you notice that she has \ndark spots on her face and that she is sneezing.\n"
+      	JTextArea opt3 = new JTextArea("You see Abdul going to grab a towel after sneezing a lot.\n"
+          + "You can see that he has dark spots on his face and \nis also coughing.\n"
           + "What precautions do you take?");
    		opt3.setEditable(false);
    		opt3.setBounds(190, 225, 550, 125);
@@ -246,20 +247,11 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 			g.setColor(Color.BLACK);
 			g.drawString("Submit", submitTextX, submitTextY);
 			if (randomNum == 1 && clicked1 == true && clicked3 == true)
-         {
-     			new ErrorCheck(true);
-			   new TestLevelQuestion2();
-         }
-			else if (randomNum == 2 && clicked5 == true)
-         {
-     			new ErrorCheck(true);
-			   new TestLevelQuestion2();
-         }
+            new TestLevelSucceeded();
+			else if (randomNum == 2 && clicked1 == true && clicked3 == true)
+            new TestLevelSucceeded();
          else if (randomNum == 3 && clicked2 == true && clicked4 == true)
-         {
-     			new ErrorCheck(true);
-			   new TestLevelQuestion2();
-         }
+            new TestLevelSucceeded();
          else 
             new TestLevelFailed();
 			dispose();
@@ -286,7 +278,7 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       g.setColor(Color.GRAY);
 		g.drawRect(120, 255, 70, 40);
 		g.setColor(Color.BLACK);
-		g.drawString("Question 1:", 125, 280);
+		g.drawString("Question 3:", 125, 280);
 		if (clicked1)
 			g.setColor(Color.LIGHT_GRAY);
 		else
