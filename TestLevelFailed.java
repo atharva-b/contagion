@@ -7,10 +7,10 @@ public class TestLevelFailed extends JFrame implements MouseListener {
 	
       private int RectWidth = 100; 
     	private int RectHeight = 40;
-      private int mainMenuRectX = 425;
-   	private int mainMenuRectY = 650;
-   	private int mainMenuTextX = 445;
-   	private int mainMenuTextY = 675;
+      private int backToTestRectX = 425;
+   	private int backToTestRectY = 650;
+   	private int backToTestTextX = 440;
+   	private int backToTestTextY = 675;
       private int windowName = 10;
 	
 	public TestLevelFailed() {
@@ -39,15 +39,15 @@ public class TestLevelFailed extends JFrame implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 	   Graphics g = getGraphics();
-		   if(e.getX() > mainMenuRectX 
-   			&& e.getX() < mainMenuRectX + RectWidth 
-			   && e.getY() > mainMenuRectY 
-				&& e.getY() < mainMenuRectY + RectHeight) {		
+		   if(e.getX() > backToTestRectX 
+   			&& e.getX() < backToTestRectX + RectWidth 
+			   && e.getY() > backToTestRectY 
+				&& e.getY() < backToTestRectY + RectHeight) {		
 			g.setColor(Color.LIGHT_GRAY);
-			g.fillRect(mainMenuRectX, mainMenuRectY, RectWidth, RectHeight);
+			g.fillRect(backToTestRectX, backToTestRectY, RectWidth, RectHeight);
 			g.setColor(Color.BLACK);
-			g.drawString("Main Menu", mainMenuTextX, mainMenuTextY);
-			new MouseListenerContagion();
+			g.drawString("Back to Test", backToTestTextX, backToTestTextY);
+			new TestLevel();
 			dispose();
  		}	
 	}
@@ -56,26 +56,26 @@ public class TestLevelFailed extends JFrame implements MouseListener {
 	public void mouseReleased(MouseEvent e) {
 		Graphics g = getGraphics();
       g.setColor(Color.GRAY);
-		g.fillRect(mainMenuRectX, mainMenuRectY, RectWidth, RectHeight);
+		g.fillRect(backToTestRectX, backToTestRectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Main Menu", mainMenuTextX, mainMenuTextY);  
+		g.drawString("Back to Test", backToTestTextX, backToTestTextY);  
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
       Graphics g = getGraphics();
       g.setColor(Color.GRAY);
-		g.fillRect(mainMenuRectX, mainMenuRectY, RectWidth, RectHeight);
+		g.fillRect(backToTestRectX, backToTestRectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Main Menu", mainMenuTextX, mainMenuTextY);  
+		g.drawString("Back to Test", backToTestTextX, backToTestTextY);  
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		Graphics g = getGraphics();
       g.setColor(Color.GRAY);
-		g.fillRect(mainMenuRectX, mainMenuRectY, RectWidth, RectHeight);
+		g.fillRect(backToTestRectX, backToTestRectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Main Menu", mainMenuTextX, mainMenuTextY);     		
+		g.drawString("Back to Test", backToTestTextX, backToTestTextY);     		
 	}
 }

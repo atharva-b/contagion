@@ -5,24 +5,26 @@ import java.awt.event.MouseListener;
 
 public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 
-	private int RectWidth = 100; 
-	private int RectHeight = 40;
-	private int option1RectX = 250;
+	private int RectWidth = 250; 
+	private int RectHeight = 60;
+	private int RectWidth1 = 100; 
+	private int RectHeight1 = 40;
+	private int option1RectX = 175;
 	private int option1RectY = 550;
-	private int option1TextX = 278;
-	private int option1TextY = 575;
-	private int option2RectX = 600;
+	private int option1TextX = 255;
+	private int option1TextY = 585;
+	private int option2RectX = 535;
 	private int option2RectY = 550;
-	private int option2TextX = 615;
-	private int option2TextY = 575;      
-	private int option3RectX = 250;
+	private int option2TextX = 590;
+	private int option2TextY = 585;
+	private int option3RectX = 175;
 	private int option3RectY = 650;
-	private int option3TextX = 278;
-	private int option3TextY = 675;
-	private int option4RectX = 600;
+	private int option3TextX = 250;
+	private int option3TextY = 685;
+	private int option4RectX = 535;
 	private int option4RectY = 650;
-	private int option4TextX = 625;
-	private int option4TextY = 675;
+	private int option4TextX = 610;
+	private int option4TextY = 685;
 	private int pictureRectX = 430;
 	private int pictureRectY = 450;
 	private int pictureTextX = 445;
@@ -35,8 +37,9 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 
 	public BeginnerLevelQuestion2() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.PNG"));
-		label.setBounds(120, -80, 950, 350);
+		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.PNG"));
+		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));		
+      label.setBounds(120, -80, 950, 350);
 		add(label);
 		addMouseListener(this);
 		setSize(1000, 800);
@@ -63,7 +66,18 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Graphics g = getGraphics();
-		drawGraphics();     		
+		drawGraphics();    
+		if(e.getX() > pictureRectX 
+				&& e.getX() < pictureRectX + RectWidth1 
+				&& e.getY() > pictureRectY 
+				&& e.getY() < pictureRectY + RectHeight1) {		
+			g.setColor(Color.LIGHT_GRAY);
+			g.fillRect(pictureRectX, pictureRectY, RectWidth1, RectHeight1);
+			g.setColor(Color.BLACK);
+			g.drawString("Open Picture", pictureTextX, pictureTextY);
+			new BeginnerLevelQ2Picture();
+		} 	
+      g.setFont(new Font("Monospaced", Font.BOLD, 20)); 	
 		if(e.getX() > option1RectX 
 				&& e.getX() < option1RectX + RectWidth 
 				&& e.getY() > option1RectY 
@@ -104,17 +118,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 			g.setColor(Color.BLACK);
 			g.drawString("Yoga Mat", option4TextX, option4TextY);
 			new ErrorCheck();
-		}	
-		if(e.getX() > pictureRectX 
-				&& e.getX() < pictureRectX + RectWidth 
-				&& e.getY() > pictureRectY 
-				&& e.getY() < pictureRectY + RectHeight) {		
-			g.setColor(Color.LIGHT_GRAY);
-			g.fillRect(pictureRectX, pictureRectY, RectWidth, RectHeight);
-			g.setColor(Color.BLACK);
-			g.drawString("Open Picture", pictureTextX, pictureTextY);
-			new BeginnerLevelQ2Picture();
-		}	
+		}		
 	}
 
 	@Override
@@ -135,9 +139,14 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 	public void drawGraphics() {
 		Graphics g = getGraphics();
 		g.setColor(Color.GRAY);
-		g.drawRect(questionRectX, questionRectY, 70, RectHeight);
+		g.drawRect(questionRectX, questionRectY, 70, RectHeight1);
 		g.setColor(Color.BLACK);
 		g.drawString("Question:", questionTextX, questionTextY);
+		g.setColor(Color.GRAY);
+		g.fillRect(pictureRectX, pictureRectY, RectWidth1, RectHeight1);
+		g.setColor(Color.BLACK);
+		g.drawString("Open Picture", pictureTextX, pictureTextY); 
+      g.setFont(new Font("Monospaced", Font.BOLD, 20)); 
 		g.setColor(Color.GRAY);
 		g.fillRect(option1RectX, option1RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
@@ -153,10 +162,6 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 		g.setColor(Color.GRAY);
 		g.fillRect(option4RectX, option4RectY, RectWidth, RectHeight);
 		g.setColor(Color.BLACK);
-		g.drawString("Yoga Mat", option4TextX, option4TextY);   
-		g.setColor(Color.GRAY);
-		g.fillRect(pictureRectX, pictureRectY, RectWidth, RectHeight);
-		g.setColor(Color.BLACK);
-		g.drawString("Open Picture", pictureTextX, pictureTextY);       
+		g.drawString("Yoga Mat", option4TextX, option4TextY);         
 	}
 }

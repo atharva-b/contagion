@@ -7,19 +7,20 @@ public class BeginnerLevelQ1Picture extends JFrame implements MouseListener {
 
 	private int RectWidth = 100; 
 	private int RectHeight = 40;
-	private int exitRectX = 100;
-	private int exitRectY = 240;
-	private int exitTextX = 140;
-	private int exitTextY = 265;
+	private int exitRectX = 200;
+	private int exitRectY = 340;
+	private int exitTextX = 240;
+	private int exitTextY = 365;
 
 	public BeginnerLevelQ1Picture() {      
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\BeginnerLevelQ1Picture.jpg"));
-		label.setBounds(20, 20, 250, 160);
+		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\BeginnerLevelQ1Picture.jpg"));
+		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\BeginnerLevelQ1Picture.jpg"));		
+		label.setBounds(100, -20, 450, 360);
 		add(label);
 		addMouseListener(this);
-		setLocation(350,200);
-		setSize(300, 300);
+		setLocation(250,150);
+		setSize(500, 400);
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);

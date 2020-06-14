@@ -20,7 +20,8 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 
 	public BeginnerLevel() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
 		label.setBounds(120, -100, 950, 350);
 		add(label);
 		addMouseListener(this);
@@ -78,7 +79,7 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 		thirdRight.setBounds(595, 325, 300, 105);
 		thirdRight.setFont(bodyFont);
 		add(thirdRight);
-		JTextArea bottomRight = new JTextArea("Use insect repellents. Wear\nlong-sleeve shirts and long pants to\ncover exposed skin. Stay and sleep in\nscreened or air-conditioned rooms.\nConsider using mosquito nets.");
+		JTextArea bottomRight = new JTextArea("Use insect repellents. Wear\nlong-sleeve shirts and long pants to\ncover exposed skin. Stay and sleep\nin screened or air-conditioned rooms.\nConsider using mosquito nets.");
 		bottomRight.setEditable(false);
 		bottomRight.setBounds(595,435, 300, 105);
 		bottomRight.setFont(bodyFont);
