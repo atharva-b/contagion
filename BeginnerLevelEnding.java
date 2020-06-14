@@ -22,12 +22,18 @@ public class BeginnerLevelEnding extends JFrame implements MouseListener {
 		setSize(1000, 800);
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
+      Font font1 = new Font("Monospaced", Font.BOLD, 40);
+		JTextArea area=new JTextArea("\n\n Congratulations! You have \n  completed the learning \n    level successfully!");  
+		area.setBounds(150,200,650,400);  
+		area.setFont(font1);
+		area.setEditable(false);
+		add(area); 
 		addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosing(java.awt.event.WindowEvent e) {
 				new CloseWindow(windowName);
 			}
 		});
+		setVisible(true);
 	}
 
 	@Override
