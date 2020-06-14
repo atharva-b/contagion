@@ -4,36 +4,36 @@ import java.awt.event.*;
 import java.awt.event.MouseListener;
 
 public class BeginnerLevelQ2Picture extends JFrame implements MouseListener {
-	
-      private int RectWidth = 100; 
-    	private int RectHeight = 40;
-   	private int exitRectX = 100;
-   	private int exitRectY = 240;
-   	private int exitTextX = 140;
-   	private int exitTextY = 265;
-	
+
+	private int RectWidth = 100; 
+	private int RectHeight = 40;
+	private int exitRectX = 100;
+	private int exitRectY = 240;
+	private int exitTextX = 140;
+	private int exitTextY = 265;
+
 	public BeginnerLevelQ2Picture() {      
-      JLabel label = new JLabel();  
-      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\BeginnerLevelQ2Picture.png"));
-      label.setBounds(20, 20, 250, 160);
-      add(label);
-      addMouseListener(this);
-      setLocation(350,200);
-      setSize(300, 300);
+		JLabel label = new JLabel();  
+		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\BeginnerLevelQ2Picture.png"));
+		label.setBounds(20, 20, 250, 160);
+		add(label);
+		addMouseListener(this);
+		setLocation(350,200);
+		setSize(300, 300);
 		setLayout(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-      drawGraphics();		
+		drawGraphics();		
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-	   Graphics g = getGraphics();
-      drawGraphics();
+		Graphics g = getGraphics();
+		drawGraphics();
 		if(e.getX() > exitRectX 
 				&& e.getX() < exitRectX + RectWidth 
 				&& e.getY() > exitRectY 
@@ -48,20 +48,20 @@ public class BeginnerLevelQ2Picture extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-      drawGraphics();
+		drawGraphics();
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-      drawGraphics();	
+		drawGraphics();	
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-      drawGraphics();
+		drawGraphics();
 	}
 
-   public void drawGraphics() {
+	public void drawGraphics() {
 		Graphics g = getGraphics();
 		g.setColor(Color.GRAY);
 		g.fillRect(exitRectX, exitRectY, RectWidth, RectHeight);

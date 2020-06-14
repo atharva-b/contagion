@@ -10,7 +10,7 @@ public class CloseWindow{
   	private int input = 0;
 
 	public CloseWindow(int parentWindow) {
-		input = JOptionPane.showConfirmDialog(null, "Would you like to Exit?", "Contagion", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+		input = JOptionPane.showConfirmDialog(null, "Would you like to exit?", "Contagion", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 		this.parentWindow = parentWindow;
 		windowClosing();
 	}

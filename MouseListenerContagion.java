@@ -21,14 +21,14 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 	private int quitRectY = 460;
 	private int quitTextX = 488;
 	private int quitTextY = 485;
-   private int windowName = 1;
-	
+	private int windowName = 1;
+
 	public MouseListenerContagion() {      
-      JLabel label = new JLabel();  
-      //label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Example Logo.png"));
-      label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
-      label.setBounds(120, -100, 950, 350);
-      add(label);
+		JLabel label = new JLabel();  
+		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+		//label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
+		label.setBounds(120, -100, 950, 350);
+		add(label);
 		addMouseListener(this);
 		setSize(1000, 800);
 		setTitle("Contagion");
@@ -39,8 +39,8 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 				new CloseWindow(windowName);
 			}
 		});
- 	}
-	
+	}
+
 	public void mouseClicked(MouseEvent e) {
 		drawGraphics();
 	}
@@ -79,7 +79,7 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 	public void mouseExited(MouseEvent e) {
 		drawGraphics();
 	}	
-	
+
 	public void drawGraphics() {
 		Graphics g = getGraphics();
 		g.setColor(Color.BLUE);

@@ -4,31 +4,44 @@ import java.awt.event.*;
 import java.awt.event.MouseListener;
 
 public class BeginnerLevelInstructions extends JFrame implements MouseListener{
-	
-	private int continueRectX = 250;
-	private int continueRectY = 525;
+
+	private int continueRectX = 175;
+	private int continueRectY = 510;
 	private int mainMenuRectX = 50;
 	private int mainMenuRectY = continueRectY;
 	private int rectWidth = 100;
 	private int rectHeight = 40;
-	private int continueTextX = 275;
-	private int continueTextY = 550;
+	private int continueTextX = 200;
+	private int continueTextY = 535;
 	private int mainMenuTextX = 70;
 	private int mainMenuTextY = continueTextY;
 	private int windowName = 2;
-	
-	
+
+
 	public BeginnerLevelInstructions() {
 		addMouseListener(this);
-		setSize(400, 600);
-		setLocation (100, 25);
+		JLabel label = new JLabel();  
+		label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png").getImage().getScaledInstance(530, 130, Image.SCALE_DEFAULT)));
+		label.setBounds(260, 325, 950, 350);
+		add(label);
+		setSize(800, 600);
 		setTitle("Contagion");
 		setLayout(null);
+		Font font1 = new Font("Monospaced", Font.BOLD, 20);
+		JTextArea area=new JTextArea("Welcome to Contagion! \n\n"
+				+ "For the Beginner Level, you will be given 2 scenarios:\none deals with the Flu and one deals with the Zika virus. \n\n"
+				+ "Both scenarios revolve around a Fitness Centre setting,\nso keep that in mind!\n\n"
+				+ "You will have to answer both questions based on the\ninformation given to you on the next page. \n\n\n\n"
+				+ "Good Luck!");  
+		area.setBounds(30,30,740,400);  
+		area.setFont(font1);
+		area.setEditable(false);
+		add(area);  
 		addWindowListener(new java.awt.event.WindowAdapter() {
-	    	  public void windowClosing(java.awt.event.WindowEvent e) {
-	    		  new CloseWindow(windowName);
-	    		  }
-	    	  });
+			public void windowClosing(java.awt.event.WindowEvent e) {
+				new CloseWindow(windowName);
+			}
+		});
 		setVisible(true);
 	}
 	@Override
@@ -83,7 +96,7 @@ public class BeginnerLevelInstructions extends JFrame implements MouseListener{
 		// TODO Auto-generated method stub
 		drawGraphics();
 	}
-	
+
 	public void drawGraphics() {
 		Graphics g = getGraphics();
 		g.setColor(Color.GRAY);
@@ -93,5 +106,5 @@ public class BeginnerLevelInstructions extends JFrame implements MouseListener{
 		g.drawString("Continue", continueTextX, continueTextY);
 		g.drawString("Main Menu", mainMenuTextX, mainMenuTextY);
 	}
-	
+
 }
