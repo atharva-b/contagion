@@ -21,13 +21,19 @@ public class TestLevelFailed extends JFrame implements MouseListener {
       addMouseListener(this);
 		setSize(1000, 800);
 		setLayout(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+      Font font1 = new Font("Monospaced", Font.BOLD, 30);
+		JTextArea message=new JTextArea("       You have been INFECTED! \n\n\n        You did not take the \n         proper precautions! \n\n\n        Stay safe next time!");  
+		message.setBounds(150,225,650,350);  
+		message.setFont(font1);
+		message.setEditable(false);
+		add(message);
 		addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowClosing(java.awt.event.WindowEvent e) {
 				new CloseWindow(windowName);
 			}
 		});
+		setVisible(true);
 	}
 
 	@Override
