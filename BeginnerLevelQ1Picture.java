@@ -1,3 +1,10 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class displays a picture for the beginner level question 1 in a new JFrame.
+*/
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -15,12 +22,13 @@ public class BeginnerLevelQ1Picture extends JFrame implements MouseListener {
 	public BeginnerLevelQ1Picture() {      
 		JLabel label = new JLabel();  
 		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\BeginnerLevelQ1Picture.jpg"));
-		//label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\BeginnerLevelQ1Picture.jpg"));		
+		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\BeginnerLevelQ1Picture.jpg"));		
 		label.setBounds(100, -20, 450, 360);
 		add(label);
 		addMouseListener(this);
 		setLocation(250,150);
 		setSize(500, 400);
+      setTitle("Picture for Beginner Level Question 1");
 		setLayout(null);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);

@@ -1,3 +1,10 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class displays the instructions for the beginner level.
+*/
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -22,7 +29,7 @@ public class BeginnerLevelInstructions extends JFrame implements MouseListener{
 		addMouseListener(this);
 		JLabel label = new JLabel();  
 		label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png").getImage().getScaledInstance(530, 130, Image.SCALE_DEFAULT)));
-		//label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png").getImage().getScaledInstance(530, 130, Image.SCALE_DEFAULT)));
+		label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png").getImage().getScaledInstance(530, 130, Image.SCALE_DEFAULT)));
       label.setBounds(260, 325, 950, 350);
 		add(label);
 		setSize(800, 600);

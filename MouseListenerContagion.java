@@ -1,6 +1,12 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class is the main menu for the entire game.
+*/
+
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.MouseListener;
@@ -26,7 +32,7 @@ public class MouseListenerContagion extends JFrame implements MouseListener {
 	public MouseListenerContagion() {      
 		JLabel label = new JLabel();  
 		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
-		//label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
+		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
 		label.setBounds(120, -100, 950, 350);
 		add(label);
 		addMouseListener(this);

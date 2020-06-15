@@ -1,3 +1,10 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class is the ending of the beginner level which displays a message saying you have completed the learning level.
+*/
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -15,12 +22,13 @@ public class BeginnerLevelEnding extends JFrame implements MouseListener {
 
 	public BeginnerLevelEnding() {
 		JLabel label = new JLabel();  
-		//label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
+		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
 		label.setBounds(0, -100, 950, 350);
 		add(label);
 		addMouseListener(this);
 		setSize(800, 600);
+      setTitle("Beginner Level Ending Message");
 		setLayout(null);
 		Font font1 = new Font("Monospaced", Font.BOLD, 40);
 		JTextArea area=new JTextArea(" Congratulations! You have \n  completed the learning \n    level successfully!");  

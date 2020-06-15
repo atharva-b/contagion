@@ -1,3 +1,10 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class displays the second question for the beginner level.
+*/
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -37,12 +44,13 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 
 	public BeginnerLevelQuestion2() {
 		JLabel label = new JLabel();  
-		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.PNG"));
+		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.PNG"));
 		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));		
 		label.setBounds(120, -80, 950, 350);
 		add(label);
 		addMouseListener(this);
 		setSize(1000, 800);
+      setTitle("Beginner Level Question 2");
 		setLayout(null);
 		Font font1 = new Font("Monospaced", Font.BOLD, 20);
 		JTextArea question2 = new JTextArea("On which surfaces found in the\ngym is the Flu virus likely to\nstay on the longest?");

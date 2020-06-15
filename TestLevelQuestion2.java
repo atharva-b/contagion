@@ -2,7 +2,7 @@
 Name: Atharva Bhalerao, Rushi Barot
 Date: Monday, June 15, 2020
 Teacher: Ms. Krasteva
-Description: This class is the first question for the test level.
+Description: This class is the second question for the test level.
 */
 
 import java.awt.*;
@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.event.MouseListener;
 
-public class TestLevelQuestion extends JFrame implements MouseListener {
+public class TestLevelQuestion2 extends JFrame implements MouseListener {
 
 	private int RectWidth = 100; 
 	private int RectHeight = 40;
@@ -50,7 +50,7 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
    private int randomNum = 0;
 
 
-	public TestLevelQuestion() {
+	public TestLevelQuestion2() {
 		JLabel label = new JLabel();  
 		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
 		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
@@ -58,15 +58,14 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 		add(label);
 		addMouseListener(this);
 		setSize(1000, 650);
-      setTitle("Test Level Question 1");
+      setTitle("Test Level Question 2");
 		setLayout(null);
       randomNum = 1 + (int)(Math.random()*3);
       Font font1 = new Font("Monospaced", Font.PLAIN, 18);
       if (randomNum == 1)
       {
-      	JTextArea opt1 = new JTextArea("You meet David as he enters through the door.\n"
-          + "David is heavily coughing and has a red face.\n"
-          + "As he walks closer towards you, it seems like he \nis shaking heavily.\n"
+      	JTextArea opt1 = new JTextArea("You see Tony near the dumbbell rack.\n" 
+          + "You notice that he is coughing a lot and is \nshivering tremendously.\n" 
           + "What precautions do you take?");
    		opt1.setEditable(false);
    		opt1.setBounds(190, 225, 550, 125);
@@ -75,8 +74,8 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       }
       else if (randomNum == 2)
       {
-      	JTextArea opt2 = new JTextArea("You meet Doug near the water fountain.\n" 
-          + "Doug seems to be tired, has a red face, and is \nsweating a lot.\n"
+      	JTextArea opt2 = new JTextArea("You see Priyanka coming out of the yoga studio.\n" 
+          + "She’s sneezing a lot, but other than that she \nseems normal.\n"
           + "What precautions do you take?");
    		opt2.setEditable(false);
    		opt2.setBounds(190, 225, 550, 125);
@@ -85,8 +84,8 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       }
       else if (randomNum == 3)
       {
-      	JTextArea opt3 = new JTextArea("You see Elizabeth at the treadmill.\n"
-          + "As you get closer, you notice that she has \ndark spots on her face and that she is sneezing.\n"
+      	JTextArea opt3 = new JTextArea("You meet Kentaro as he exits the changing room.\n"
+          + "His face has some dark spots on it, and he seems \nto be sweating an awful lot for someone who just \ncame into the gym.\n"
           + "What precautions do you take?");
    		opt3.setEditable(false);
    		opt3.setBounds(190, 225, 550, 125);
@@ -256,17 +255,17 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
 			if (randomNum == 1 && clicked1 == true && clicked3 == true)
          {
      			new ErrorCheck(true);
-			   new TestLevelQuestion2();
+			   new TestLevelQuestion3();
          }
 			else if (randomNum == 2 && clicked5 == true)
          {
      			new ErrorCheck(true);
-			   new TestLevelQuestion2();
+			   new TestLevelQuestion3();
          }
          else if (randomNum == 3 && clicked2 == true && clicked4 == true)
          {
      			new ErrorCheck(true);
-			   new TestLevelQuestion2();
+			   new TestLevelQuestion3();
          }
          else 
             new TestLevelFailed();
@@ -294,7 +293,7 @@ public class TestLevelQuestion extends JFrame implements MouseListener {
       g.setColor(Color.GRAY);
 		g.drawRect(120, 255, 70, 40);
 		g.setColor(Color.BLACK);
-		g.drawString("Question 1:", 125, 280);
+		g.drawString("Question 2:", 125, 280);
 		if (clicked1)
 			g.setColor(Color.LIGHT_GRAY);
 		else
