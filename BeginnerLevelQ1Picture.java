@@ -21,8 +21,7 @@ public class BeginnerLevelQ1Picture extends JFrame implements MouseListener {
 
 	public BeginnerLevelQ1Picture() {      
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\BeginnerLevelQ1Picture.jpg"));
-		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\BeginnerLevelQ1Picture.jpg"));		
+		label.setIcon(new ImageIcon("Images/BeginnerLevelQ1Picture.jpg"));	
 		label.setBounds(100, -20, 450, 360);
 		add(label);
 		addMouseListener(this);

@@ -22,8 +22,8 @@ public class TestLevelSucceeded extends JFrame implements MouseListener {
 
 	public TestLevelSucceeded() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
-		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+		
+		label.setIcon(new ImageIcon("Images/Example Logo.png"));
 		label.setBounds(120, -100, 950, 350);
 		add(label);
 		Font font1 = new Font("Monospaced", Font.BOLD, 20);

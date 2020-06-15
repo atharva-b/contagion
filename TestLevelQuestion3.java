@@ -52,8 +52,8 @@ public class TestLevelQuestion3 extends JFrame implements MouseListener {
 
 	public TestLevelQuestion3() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
-		//label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
+		
+		label.setIcon(new ImageIcon("Images/Example Logo.png"));
 		label.setBounds(120, -80, 950, 350);
 		add(label);
 		addMouseListener(this);
@@ -86,8 +86,8 @@ public class TestLevelQuestion3 extends JFrame implements MouseListener {
       }
       else if (randomNum == 3)
       {
-      	JTextArea opt3 = new JTextArea("You see Abdul going to grab a towel after sneezing a lot.\n"
-          + "You can see that he has dark spots on his face and \nis also coughing.\n"
+      	JTextArea opt3 = new JTextArea("You see Abdul going to grab a towel after sneezing\na lot. "
+          + "You can see that he has dark spots on his\nface and is also coughing.\n"
           + "What precautions do you take?");
    		opt3.setEditable(false);
    		opt3.setBounds(190, 225, 550, 125);

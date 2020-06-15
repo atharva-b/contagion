@@ -3,7 +3,7 @@ Name: Atharva Bhalerao, Rushi Barot
 Date: Monday, June 15, 2020
 Teacher: Ms. Krasteva
 Description: This class is the Beginner Level information class which displays the symptoms, transmission, and prevention of the 2 viruses.
-*/
+ */
 
 import java.awt.*;
 import javax.swing.*;
@@ -27,13 +27,13 @@ public class BeginnerLevel extends JFrame implements MouseListener {
 
 	public BeginnerLevel() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.png"));
-		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
+		label.setIcon(new ImageIcon("Images/Example Logo.png"));
+		//label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));
 		label.setBounds(120, -100, 950, 350);
 		add(label);
 		addMouseListener(this);
 		setSize(1000, 650);
-      setTitle("Beginner Level Information");
+		setTitle("Beginner Level Information");
 		setLayout(null);
 		Font headerFont = new Font("Monospaced", Font.BOLD, 20);
 		Font bodyFont = new Font("Monospaced", Font.PLAIN, 13);

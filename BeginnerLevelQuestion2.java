@@ -44,8 +44,7 @@ public class BeginnerLevelQuestion2 extends JFrame implements MouseListener {
 
 	public BeginnerLevelQuestion2() {
 		JLabel label = new JLabel();  
-		label.setIcon(new ImageIcon("C:\\Users\\athar\\eclipse-workspace\\Contagion\\src\\Pictures\\Example Logo.PNG"));
-		label.setIcon(new ImageIcon("C:\\Users\\rushi\\Desktop\\ICS ISP\\Pictures\\Example Logo.png"));		
+		label.setIcon(new ImageIcon("Images/Example Logo.PNG"));	
 		label.setBounds(120, -80, 950, 350);
 		add(label);
 		addMouseListener(this);
