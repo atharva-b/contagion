@@ -1,3 +1,10 @@
+/*
+Name: Atharva Bhalerao, Rushi Barot
+Date: Monday, June 15, 2020
+Teacher: Ms. Krasteva
+Description: This class displays a message when the user tries to exit the game.
+*/
+
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.event.MouseListener;
